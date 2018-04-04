@@ -98,7 +98,7 @@ class BootstrapModuleServiceProvider extends ServiceProvider
 
     protected function registerBlogFields()
     {
-        if (modules_management()->isActivated('webed-blog') && modules_management()->isInstalled('webed-blog')) {
+        if (plugins_support()->isActivated('webed-blog') && plugins_support()->isInstalled('webed-blog')) {
             custom_field_rules()->registerRuleGroup('Blog')
                 ->registerRule('Blog', 'Post template', 'blog.post_template', get_templates('Post'))
                 ->registerRule('Blog', 'Category template', 'blog.category_template', get_templates('Category'))
